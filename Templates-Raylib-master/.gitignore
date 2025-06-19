@@ -1,0 +1,6 @@
+**/*.exe
+**/*.ini
+**/build
+/outros/projeto-base-java-maven/target/
+/outros/projeto-base-java-netbeans/nbproject/private/
+/outros/projeto-base-java-netbeans/build/
