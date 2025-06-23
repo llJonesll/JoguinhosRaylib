@@ -2,6 +2,18 @@ Acabei de comentar o máximo que consegui do que fiz de diferente na programaç�
 
 Tinha cometido o meu primeiro erro na criação de um jogo ou programa. Documentação insuficiente hahaha.
 
+Update 23/06/25:
+Acabei de refinar o código da máquina, eu fiz ela pra ser bem inteligente, não vou explicar com detalhes aqui como ela funciona,
+mas está tudo bem explicadinho no código.
+Sim, ela é "ganhável" hahaha.
+
+Vou engavetar esse joguinho por enquanto, por que vou focar no projeto do breakout da matéria de algorítmos, mas ainda tem bastante coisa
+que eu quero fazer, o jogo por enquanto não acaba nunca, o único jeito de resetar ele é abrindo de novo.
+
+Mas acho que tá bem legal, dá pra perder um tempinho tentando ganhar do computador kkkkk.
+
+Quero tentar implementar tudo o que eu inventei aqui no breakout, acho que vai ficar bem legal também!
+
 Adoraria ouvir sua opinião e sugestão.
 Qualquer dúvida pode me mandar mensagem, se você recebeu esse arquivo provavelmente tem meu número, mas caso não:
 

@@ -339,7 +339,7 @@ void draw( void ) {
 
 
 
-    DrawFPS( 20, 20); // só pra confirmar como que tava rodando nos PC's do laboratório kkkkkkk
+    //DrawFPS( 20, 20); // Se quiser ver os FPS.
 
     
 
@@ -350,8 +350,7 @@ void draw( void ) {
 void atualizarJogador( Jogador *jogador, float delta, int teclaCima, int teclaBaixo, int teclaImpulso, int teclaSuperImpulso) { //aqui que começa a ficar legal
 
     // se o jogador tiver energia e apertar a tecla de impulso, ele ganha
-    // velocidade e perde 8 de energia por tick (por isso o jogo só roda a
-    // 60 FPS, eu não conseui fazer o delta funcionar fora das funções)
+    // velocidade e perde 8 de energia por tick
     if( jogador->energia > 0 && IsKeyDown( teclaImpulso ) ){ 
         jogador->vel = 500;
         jogador->energia -= 8;
@@ -483,6 +482,7 @@ void desenharPlacar( Jogador *jogador1, Jogador *jogador2){
     char tempoImpulso2[7];
     char superImpulso1[7];
     char superImpulso2[7];
+
     strcpy(pj1, TextFormat("%d", jogador1->pontuacao));
     strcpy(pj2, TextFormat("%d", jogador2->pontuacao));
     strcpy(energia1, TextFormat("%.0f", jogador1->energia));
@@ -557,7 +557,7 @@ void desenharPlacar( Jogador *jogador1, Jogador *jogador2){
     );
 
 }
-
+// daqui até o fim do atualizarBola fizemos em sala de aula
 void desenharQuadra(void){
 
     int centro = GetScreenWidth() / 2;
@@ -720,15 +720,17 @@ void usarPoderes( Jogador *jogador2, float delta, Bola *bola) {
     // agora que eu sei disso, parece óbvio,
     // nas primeiras aulas você já tinha falado disso,
     // if (1) é verdadeiro, e if (0) é falso,
+
+
     bool bolaVindo = bola->vel.x > 0;
     // a lógica das situações depende da velocidade da bola,
     // quanto mais rápido a bola estiver, mais o computador vai tentar antecipar a bola,
-    // só ativa quando a bola estiver indo em direção ao jogador2,
+    // só ativa quando a bola estiver indo em direção ao computador,
     bool bolaProxima = bola->pos.x > jogador2->pos.x - (bola->vel.x/200 * 220) && bola->pos.x < jogador2->pos.x + 40 && bola->pos.x > GetScreenWidth() - 150;
     // 
     bool bolaAbaixo = bola->pos.y < jogador2->pos.y || bola->pos.y > jogador2->pos.y + jogador2->dim.y;
 
-    // impulso se ativa se a bola está próxima, vindo, e o jogador não conseguiria alcançar normalmente
+    // impulso se ativa se a bola está próxima, vindo, e o computador não conseguiria alcançar normalmente
     if (jogador2->energia > 0 && bolaVindo && bolaProxima && bolaAbaixo) {
         jogador2->vel = 500;
         jogador2->energia -= 8;
@@ -774,4 +776,5 @@ void usarPoderes( Jogador *jogador2, float delta, Bola *bola) {
 
 
 
-//Muito obrigado pela aula professor! Foi muito divertido fazer esse jogo, e aprendi muito com ele! Espero que o senhor goste do resultado, e que tenha sido divertido de jogar! :D
+//Muito obrigado pela aula professor! Foi muito divertido fazer esse jogo, e aprendi muito com ele!
+// Espero que o senhor goste do resultado, e que tenha sido divertido de jogar! :D
